@@ -1,6 +1,8 @@
 <template>
   <div class="my-16 p-10 border-solid border-gray-300 border-1 bg-gray-200 shadow-sm">
-    <h3 class="text-2xl text-teal-500 font-montserrat font-black">{{title}}</h3>
+    <g-link :to="link">
+      <h3 class="text-2xl text-teal-500 font-montserrat font-black">{{title}}</h3>
+    </g-link>
     <span class="text-gray-500 text-xs mt-1 inline-block">{{date}} &bull;</span>
     <span
       class="text-teal-400 inline-block text-xs ml-1 mr-1"
@@ -34,6 +36,10 @@ export default {
       }
     },
     date: {
+      type: String,
+      required: true
+    },
+    link: {
       type: String,
       required: true
     }

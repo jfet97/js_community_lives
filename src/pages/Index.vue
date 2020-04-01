@@ -25,6 +25,7 @@
           :description="live.description"
           :speakers="live.speakers"
           :date="live.date"
+          :link="`/lives/${live.id}`"
         />
       </transition-group>
 

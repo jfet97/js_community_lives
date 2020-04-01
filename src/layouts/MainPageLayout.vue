@@ -3,9 +3,11 @@
     <header>
       <div class="w-full flex justify-center">
         <div class="flex flex-col">
-          <h1
-            class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-teal-500 font-montserrat font-black mt-12 capitalize"
-          >JavaScript developer italiani - Lives</h1>
+          <g-link to="/">
+            <h1
+              class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-teal-500 font-montserrat font-black mt-12 capitalize"
+            >JavaScript developer italiani - Lives</h1>
+          </g-link>
           <div class="flex justify-center mt-4">
             <a
               href="https://www.facebook.com/groups/javascript.developer.italiani/"
