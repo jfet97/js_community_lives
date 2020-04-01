@@ -37,7 +37,11 @@
         </div>
       </div>
     </header>
-    <slot />
+    <div class="w-full flex justify-center">
+      <div class="w-1/2 flex flex-col">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
 
