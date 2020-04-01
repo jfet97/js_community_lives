@@ -19,7 +19,7 @@
     <div class="mt-24 w-full">
       <transition-group name="fade">
         <live-card-component
-          v-for="live in loadedLives"
+          v-for="live in lives"
           :key="live.id"
           :title="live.title"
           :description="live.description"
@@ -32,7 +32,7 @@
       <ClientOnly>
         <infinite-loading @infinite="infiniteHandler" spinner="spiral">
           <div slot="no-more">
-            <span class="text-gray-800 mb-12 block">Altre lives presto in arrivo!</span>
+            <span class="text-gray-800 mb-12 block">Altre live presto in arrivo!</span>
           </div>
           <!-- <div slot="no-results"></div> -->
         </infinite-loading>
@@ -92,11 +92,27 @@ export default {
   },
   computed: {
     lives() {
-      return transformLives(this.$page.allGoogleSheet.edges);
+      return this.loadedLives.sort((l1, l2) => {
+        const l1D = new Date(
+          parseInt(l1.date.split("/")[2], 10),
+          parseInt(l1.date.split("/")[1], 10) - 1,
+          parseInt(l1.date.split("/")[0], 10)
+        );
+
+        const l2D = new Date(
+          parseInt(l2.date.split("/")[2], 10),
+          parseInt(l2.date.split("/")[1], 10) - 1,
+          parseInt(l2.date.split("/")[0], 10)
+        );
+
+        console.log(l1D);
+
+        return l2D - l1D;
+      });
     }
   },
   created() {
-    this.loadedLives.push(...this.lives);
+    this.loadedLives.push(...transformLives(this.$page.allGoogleSheet.edges));
   },
   methods: {
     async infiniteHandler($state) {
@@ -125,7 +141,7 @@ export default {
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: ease opacity 2s;
+  transition: ease opacity 1s;
 }
 .fade-enter,
 .fade-leave-to {
