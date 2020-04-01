@@ -92,23 +92,25 @@ export default {
   },
   computed: {
     lives() {
-      return this.loadedLives.sort((l1, l2) => {
-        const l1D = new Date(
-          parseInt(l1.date.split("/")[2], 10),
-          parseInt(l1.date.split("/")[1], 10) - 1,
-          parseInt(l1.date.split("/")[0], 10)
-        );
+      // return this.loadedLives.sort((l1, l2) => {
+      //   const l1D = new Date(
+      //     parseInt(l1.date.split("/")[2], 10),
+      //     parseInt(l1.date.split("/")[1], 10) - 1,
+      //     parseInt(l1.date.split("/")[0], 10)
+      //   );
 
-        const l2D = new Date(
-          parseInt(l2.date.split("/")[2], 10),
-          parseInt(l2.date.split("/")[1], 10) - 1,
-          parseInt(l2.date.split("/")[0], 10)
-        );
+      //   const l2D = new Date(
+      //     parseInt(l2.date.split("/")[2], 10),
+      //     parseInt(l2.date.split("/")[1], 10) - 1,
+      //     parseInt(l2.date.split("/")[0], 10)
+      //   );
 
-        console.log(l1D);
+      //   console.log(l1D);
 
-        return l2D - l1D;
-      });
+      //   return l2D - l1D;
+      // });
+
+      return this.loadedLives;
     }
   },
   created() {
