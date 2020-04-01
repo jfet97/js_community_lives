@@ -11,6 +11,7 @@
     "gridsome-source-google-sheets": "^0.4.1"
   },
   "devDependencies": {
-    "gridsome-plugin-tailwindcss": "^2.2.43"
+    "gridsome-plugin-tailwindcss": "^2.2.43",
+    "vue-svg-loader": "^0.16.0"
   }
 }
