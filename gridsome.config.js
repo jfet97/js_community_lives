@@ -17,6 +17,14 @@ module.exports = {
   {
     use: 'gridsome-plugin-tailwindcss',
   }],
+  templates: {
+    googleSheet: [
+      {
+        path: '/lives/:id',
+        component: './src/templates/googleSheet.vue'
+      }
+    ]
+  },
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
