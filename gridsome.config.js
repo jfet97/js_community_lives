@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'JavaScript ITA Community Lives',
+  siteDescription: 'Aggregator for all the lives distributed for free by our community',
   plugins: []
 }
