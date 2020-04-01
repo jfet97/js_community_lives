@@ -7,5 +7,11 @@
 module.exports = {
   siteName: 'JavaScript ITA Community Lives',
   siteDescription: 'Aggregator for all the lives distributed for free by our community',
-  plugins: []
+  plugins: [{
+    use: 'gridsome-source-google-sheets',
+    options: {
+      sheetId: process.env.GOOGLE_SHEET_ID,
+      apiKey: process.env.GOOGLE_API_KEY,
+    }
+  }]
 }
