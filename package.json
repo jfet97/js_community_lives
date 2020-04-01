@@ -9,5 +9,8 @@
   "dependencies": {
     "gridsome": "^0.7.0",
     "gridsome-source-google-sheets": "^0.4.1"
+  },
+  "devDependencies": {
+    "gridsome-plugin-tailwindcss": "^2.2.43"
   }
 }

@@ -13,5 +13,8 @@ module.exports = {
       sheetId: process.env.GOOGLE_SHEET_ID,
       apiKey: process.env.GOOGLE_API_KEY,
     }
+  },
+  {
+    use: 'gridsome-plugin-tailwindcss',
   }]
 }
