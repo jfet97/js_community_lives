@@ -1,7 +1,7 @@
 <template>
   <MainPageLayout>
     <div class="mt-24">
-      <p class="tracking-wide leading-8 text-justify">
+      <p class="tracking-wide leading-8 text-justify text-gray-800">
         La
         <b>community</b> JavaScript Developer Italiani, capitanata da
         <a
@@ -23,6 +23,7 @@
         :title="live.title"
         :description="live.description"
         :speakers="live.speakers"
+        :date="live.date"
       />
     </div>
   </MainPageLayout>
@@ -37,6 +38,7 @@
           title
           description
           speakers
+          date
         }
       }
     }
