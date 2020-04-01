@@ -16,12 +16,21 @@
     <div class="mt-16 w-full">
       <g-image src="~/assets/images/community.jpg" height="700" fit="cover" />
     </div>
+    <div class="mt-24 w-full">
+      <live-card-component
+        v-for="live in lives"
+        :key="live.id"
+        :title="live.title"
+        :description="live.description"
+        :speakers="live.speakers"
+      />
+    </div>
   </MainPageLayout>
 </template>
 
 <page-query>
   query {
-    allGoogleSheet {
+    allGoogleSheet(sortBy: "date", order: DESC) {
       edges {
         node {
           id
@@ -35,6 +44,8 @@
 </page-query>
 
 <script>
+import LiveCardComponent from "~/components/LiveCard.vue";
+
 export default {
   metaInfo: {
     title: "JavaScript ITA Lives",
@@ -52,6 +63,9 @@ export default {
           speakers: live.speakers.replace(/\n/g, "").split(",")
         }));
     }
+  },
+  components: {
+    LiveCardComponent
   }
 };
 </script>
