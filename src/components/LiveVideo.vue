@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="rwd-video">
-      <iframe :src="link" height="315" width="560" frameborder="0" allowfullscreen></iframe>
+      <iframe :src="src" height="315" width="560" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
 </template>
@@ -12,6 +12,11 @@ export default {
     link: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    src() {
+      return this.link.replace(/watch\?v=/g, "embed/");
     }
   }
 };
