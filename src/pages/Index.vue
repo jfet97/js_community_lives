@@ -1,7 +1,7 @@
 <template>
-  <Layout>
+  <MainPageLayout>
     <div></div>
-  </Layout>
+  </MainPageLayout>
 </template>
 
 <script>
