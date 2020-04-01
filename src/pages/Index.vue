@@ -17,19 +17,21 @@
       <g-image src="~/assets/images/community.jpg" height="750" fit="cover" />
     </div>
     <div class="mt-24 w-full">
-      <live-card-component
-        v-for="live in loadedLives"
-        :key="live.id"
-        :title="live.title"
-        :description="live.description"
-        :speakers="live.speakers"
-        :date="live.date"
-      />
+      <transition-group name="fade">
+        <live-card-component
+          v-for="live in loadedLives"
+          :key="live.id"
+          :title="live.title"
+          :description="live.description"
+          :speakers="live.speakers"
+          :date="live.date"
+        />
+      </transition-group>
 
       <ClientOnly>
         <infinite-loading @infinite="infiniteHandler" spinner="spiral">
           <div slot="no-more">
-            <span class="text-gray-800">Altre lives presto in arrivo!</span>
+            <span class="text-gray-800 mb-6 block">Altre lives presto in arrivo!</span>
           </div>
           <!-- <div slot="no-results"></div> -->
         </infinite-loading>
@@ -120,4 +122,12 @@ export default {
 </script>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: ease opacity 3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
