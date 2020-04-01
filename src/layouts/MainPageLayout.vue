@@ -42,6 +42,14 @@
         <slot />
       </div>
     </div>
+    <footer class="w-full flex justify-center items-center h-20 bg-teal-500">
+      <span class="text-gray-800 text-sm">
+        Made with l'🥚 by
+        <a href="https://twitter.com/JFieldEffectT" target="_blank">
+          <span class="text-gray-200">Andrea Simone Costa</span>
+        </a>
+      </span>
+    </footer>
   </div>
 </template>
 

@@ -31,7 +31,7 @@
       <ClientOnly>
         <infinite-loading @infinite="infiniteHandler" spinner="spiral">
           <div slot="no-more">
-            <span class="text-gray-800 mb-6 block">Altre lives presto in arrivo!</span>
+            <span class="text-gray-800 mb-12 block">Altre lives presto in arrivo!</span>
           </div>
           <!-- <div slot="no-results"></div> -->
         </infinite-loading>
@@ -124,7 +124,7 @@ export default {
 <style>
 .fade-enter-active,
 .fade-leave-active {
-  transition: ease opacity 3s;
+  transition: ease opacity 2s;
 }
 .fade-enter,
 .fade-leave-to {
