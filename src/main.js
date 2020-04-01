@@ -13,6 +13,6 @@ export default function (Vue, { router, head, isClient }) {
     href: `https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,700;1,400;1,900&display=swap`
   })
 
-  head.bodyAttrs = { class: 'font-merriweather' }
+  head.bodyAttrs = { class: 'font-merriweather bg-gray-100' }
 
 }
