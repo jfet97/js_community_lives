@@ -6,7 +6,7 @@
           <g-link to="/">
             <h1
               class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-teal-500 font-montserrat font-black mt-12 capitalize"
-            >JavaScript developer italiani - Lives</h1>
+            >JavaScript developer italiani: le live</h1>
           </g-link>
           <div class="flex justify-center mt-4">
             <a
@@ -40,7 +40,7 @@
       </div>
     </header>
     <div class="w-full flex justify-center">
-      <div class="w-1/2 flex flex-col">
+      <div class="w-3/4 lg:w-1/2 flex flex-col">
         <slot />
       </div>
     </div>
