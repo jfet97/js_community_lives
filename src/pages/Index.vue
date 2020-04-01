@@ -43,7 +43,7 @@
 
 <page-query>
   query($page: Int) {
-    allGoogleSheet(sortBy: "date", order: DESC, perPage: 2, page: $page) @paginate {
+    allGoogleSheet(perPage: 2, page: $page, sortBy: "date", order: DESC) @paginate {
       pageInfo {
 			  totalPages
         currentPage
