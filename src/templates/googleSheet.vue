@@ -2,7 +2,7 @@
   <MainPageLayout>
     <div class="mt-24">
       <h2
-        class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-teal-500 font-montserrat font-black capitalize text-center"
+        class="text-2xl lg:text-3xl text-teal-500 font-montserrat font-black capitalize text-center"
       >{{$page.googleSheet.title}}</h2>
     </div>
 

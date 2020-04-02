@@ -14,7 +14,8 @@
       </p>
     </div>
     <div class="mt-16 w-full">
-      <g-image src="~/assets/images/community.jpg" height="750" fit="cover" />
+      <g-image class="hidden sm:block sm:w-full" src="~/assets/images/community.jpg" />
+      <g-image class="sm:hidden" src="~/assets/images/community_mobile.jpg" />
     </div>
     <div class="mt-24 w-full">
       <transition-group name="fade">
